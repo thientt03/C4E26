@@ -2,7 +2,7 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 from collections import OrderedDict
 
-url = "http://http://aqicn.org/"
+url="https://wind.waqi.info/nsearch/full/{place}?n=4"
 
 conn = urlopen(url)
 
