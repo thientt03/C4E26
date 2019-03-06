@@ -29,7 +29,6 @@ def new_bike():
             "image": p,
             "year": q,
         }
-        
-        print(new_item)
+        return str(new_item)
 if __name__ == '__main__':
   app.run(debug=True)

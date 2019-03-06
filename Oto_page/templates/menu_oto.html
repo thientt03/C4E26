@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GaraOto</title>
+</head>
+<body>
+    <h3> Xin chèo{{user}}</h3>
+    <h2>Hãng xe</h2>
+    {% for item in gara_list %}
+        <h3> {{ item.producer }} </h3>
+        <a href="/oto/{{loop.index0}}">click vào em đi</a>
+    {% endfor %}
+</body>
+</html>
