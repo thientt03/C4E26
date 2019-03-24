@@ -1,0 +1,21 @@
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'lcontent rcontent rcontent'
+    ;
+    grid-gap: 5px;
+}
+.lcontent{
+    background-color: aqua;
+}
+.header{
+grid-area: header;
+}
+.lcontent{
+grid-area: lcontent;
+}
+.rcontent{
+grid-area: rcontent;
+}
