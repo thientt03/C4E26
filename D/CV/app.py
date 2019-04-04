@@ -14,11 +14,11 @@ def login():
         username = request.form["username"]
         password = request.form["password"]
         if user.find_by_username(username) == None:
-            return "Wrong Username"
-        elif user.find_by_password(password) == None:
-            return "Wrong Pass"
-        else:
             return render_template("interface.html")
+        elif user.find_by_password(password) == None:
+            return render_template("interface.html")
+        else:
+            return render_template("interfaceform.html")
 # def screen():
 #   return render_template("interface.html")
     

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'cv.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+   <!-- HEADER -->
+       <header class="head">
+           <div class="head_content">
+               <img src="../static/img/CV.png" alt="logo" height="60px">
+               <ul>
+                   <td >
+                       <li class="active"><a href="">Home</a></li>
+                       <li><a href="">Login</a></li>
+                       <li><a id="a" href="">About us</a></li>
+                   </td>
+               </ul>
+           </div>
+       </header>
+       <div id="cvbuilder-container">
+               <div class="container">
+                   <div id="cv-layout-container">
+                       <div id="cv-layout">
+                           <input id="cv-title" class="non-printable" maxlength="64" placeholder="Tiêu đề CV">
+                           <div id="cvo-document-root">
+                               <div id="cvo-document" class="cvo-document">
+                                   <div class="cvo-page">
+                                       <div class="cvo-subpage">
+                                           <div id="cvo-body">
+                                               <!--Header-->
+                                               <div id="cvo-main">
+                                                   <div id="col-left">
+                                                       <!-- #group-top-left -->
+                                                       <div id="group-top-left">
+                                                           <div id="cvo-profile" class="cvo-block">
+                                                               <div id="profile-title-wrapper">
+                                                                   <div id="cvo-profile-avatar-wraper">
+                                                                       <button><img id="cvo-profile-avatar" src="../static/img/no_avatar.jpg" alt="avatar" name="cvoData[profile][avatar]" type="image"></button>
+                                                                       <!-- <img id="cvo-profile-avatar" src="./img/no_avatar.jpg" alt="avatar" name="cvoData[profile][avatar]" type="image"> -->
+                                                                   </div>
+                                                                   <div>
+                                                                       <input id="cvo-profile-fullname" name="cvoData[profile][fullname]" type="text" class="default_min_width" maxlength="64" placeholder="Họ tên">
+                                                                       <br>
+                                                                       <input id="cvo-profile-title" name="cvoData[profile][title]" type="text" class="default_min_width" maxlength="512" placeholder="Vị trí công việc bạn muốn ứng tuyển">
+                                                                   </div>
+                                                               </div>
+                                                               <div id="profile-contact-wraper">
+                                                                   <div id="cvo-profile-dob-wraper">
+                                                                       <i class="fa fa-calendar"></i>
+                                                                       <input id="cvo-profile-dob" name="cvoData[profile][dob]" type="text" class="default_min_width" maxlength="128" placeholder="Ngày sinh (không bắt buộc nhập)">
+                                                                   </div>
+                                                                   <div id="cvo-profile-gender-wraper">
+                                                                       <i class="fa fa-user"></i>
+                                                                       <input id="cvo-profile-gender" name="cvoData[profile][gender]" type="text" class="default_min_width" maxlength="128" placeholder="Giới tính (không bắt buộc nhập)">
+                                                                   </div>
+                                                                   <div id="cvo-profile-phone-wraper">
+                                                                       <i class="fa fa-phone"></i>
+                                                                       <input id="cvo-profile-phone" name="cvoData[profile][phone]" type="text" class="default_min_width" maxlength="256" placeholder="Số điện thoại">
+                                                                   </div>
+                                                                   <div id="cvo-profile-email-wraper">
+                                                                       <i class="fa fa-envelope-square"></i>
+                                                                       <input id="cvo-profile-email" name="cvoData[profile][email]" type="text" class="default_min_width" maxlength="512" placeholder="Địa chỉ email">
+                                                                   </div>
+                                                                   <div id="cvo-profile-address-wraper">
+                                                                       <i class="fa fa-map-marker"></i>
+                                                                       <input id="cvo-profile-address" name="cvoData[profile][address]" type="text" class="default_min_width" maxlength="1024" placeholder="Địa chỉ hiện tại">
+                                                                   </div>
+                                                                   <div id="cvo-profile-website-wraper">
+                                                                       <i class="fa fa-info"></i>
+                                                                       <input id="cvo-profile-website" name="cvoData[profile][website]" type="text" class="default_min_width" maxlength="512" placeholder="Website, Facebook, Blog...">
+                                                                   </div>
+                                                               </div>
+                                                               <div style="clear: both"></div>
+                                                           </div>
+                                                           <!-- FIXED GROUP -->
+                                                       </div>
+                                                       <!-- END #group-top-left -->
+                                                       <div id="group-bottom-left">
+                                                           <div id="cvo-objective" class="cvo-block" style="display: block;">
+                                                               <div class="cvo-block-title no-horizontal-line">
+                                                                   <span id="cvo-objective-blocktitle" name="cvoData[objective_meta][blocktitle]" type="text" class="default_min_width" >Nhận xét bản thân</span>
+                                                               </div>
+                                                               <input id="cvo-objective-objective" name="cvoData[objective][objective]" type="text" class="default_min_width" maxlength="4096" placeholder="Ý thức trong công việc,...">
+                                                           </div>
+                                                           <div id="cvo-interest" class="cvo-block" style="display: block;">
+                                                               <div class="cvo-block-title">
+                                                                   <span id="cvo-interest-blocktitle" name="cvoData[interest_meta][blocktitle]" type="text"  class="default_min_width" >Sở thích</span>
+                                                               </div>
+                                                               <ul id="interest-table">
+                                                                   <li class="row" type="fieldgroup">
+                                                                       <input class="cvo-interest-details default_min_width" name="cvoData[interest][@index][title]" type="text" maxlength="512" placeholder="Sở thích">
+                                                                   </li>
+                                                               </ul>
+                                                           </div>
+                                                           <div id="cvo-skillrate" class="cvo-block" style="display: none;">
+                                                               <div class="cvo-block-title">
+                                                                   <span id="cvo-skillrate-blocktitle" name="cvoData[skillrate_meta][blocktitle]" type="text">Kỹ năng</span>
+                                                               </div>
+                                                               <div id="skillrate-table">
+                                                                   <div class="row" type="fieldgroup">
+                                                                       <input class="cvo-skillrate-title default_min_width" name="cvoData[skillrate][@index][title]" type="text" maxlength="512" placeholder="Tên kỹ năng">
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <!-- END #col-left -->
+                                                   <!-- #col-right -->
+                                                   <div id="col-right">
+                                                       <div id="group-col-right">
+                                                           <div id="cvo-education" class="cvo-block">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-graduation-cap"></i></span>
+                                                                   <span id="cvo-education-blocktitle" name="cvoData[education_meta][blocktitle]" type="text">Học vấn</span>
+                                                               </div>
+                                                               <div id="education-table">
+                                                                   <div class="row " type="fieldgroup">
+                                                                       <div class="row-title">
+                                                                           <div class="cvo-education-school-wraper">
+                                                                               <input class="cvo-education-school default_min_width" name="cvoData[education][@index][school]" type="text" maxlength="512" placeholder="Tên trường học">
+                                                                           </div>
+                                                                           <div class="cvo-education-time">
+                                                                               <input class="cvo-education-start default_min_width" name="cvoData[education][@index][start]" type="text" maxlength="256" placeholder="Bắt đầu">
+                                                                               <input class="cvo-education-end default_min_width" name="cvoData[education][@index][end]" type="text" maxlength="256" placeholder="Kết thúc">
+                                                                           </div>
+   
+                                                                           <div>
+                                                                               <input class="cvo-education-title default_min_width" name="cvoData[education][@index][title]" type="text" maxlength="512" placeholder="Ngành học / Môn học">
+                                                                           </div>
+                                                                       </div>
+                                                                       <div class="row-details">
+                                                                           <input class="cvo-education-details default_min_width" name="cvoData[education][@index][details]" type="text" maxlength="4096" placeholder="Mô tả chi tiết">
+                                                                       </div>
+
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+                                                           <div id="cvo-experience" class="cvo-block" style="display: block;">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-briefcase"></i></span>
+                                                                   <span id="cvo-experience-blocktitle" name="cvoData[experience_meta][blocktitle]" type="text">Kinh nghiệm làm việc</span>
+                                                               </div>
+                                                               <div id="experience-table">
+                                                                   <div class="row " type="fieldgroup">
+                                                                       <div class="row-title">
+                                                                           <div class="cvo-experience-company-wraper">
+                                                                               <input class="cvo-experience-company default_min_width" name="cvoData[experience][@index][company]" type="text" maxlength="512" placeholder="Tên công ty">
+                                                                           </div>
+                                                                           <div class="cvo-experience-time">
+                                                                               <input class="cvo-experience-start default_min_width" name="cvoData[experience][@index][start]" type="text" maxlength="256" placeholder="Bắt đầu">
+                                                                               <input class="cvo-experience-end default_min_width" name="cvoData[experience][@index][end]" type="text" maxlength="256" placeholder="Kết thúc">
+                                                                           </div>
+                                                                           <div>
+                                                                               <input class="cvo-experience-position default_min_width" name="cvoData[experience][@index][position]" type="text" maxlength="512" placeholder="Vị trí công việc">
+                                                                           </div>
+                                                                       </div>
+                                                                       <div class="row-details">
+                                                                           <input class="cvo-experience-details default_min_width" name="cvoData[experience][@index][experience]" type="text" maxlength="4096" placeholder="Mô tả chi tiết công việc, những gì đạt được trong quá trình làm việc.">
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+                                                           <div id="cvo-award" class="cvo-block">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-trophy"></i></span>
+                                                                   <span id="cvo-award-blocktitle" name="cvoData[award_meta][blocktitle]" type="text" maxlength="1024">Giải thưởng</span>
+                                                               </div>
+                                                               <div id="award-table">
+                                                                   <div class="row " type="fieldgroup">
+                                                                       <div class="row-title">
+                                                                           <div class="cvo-award-title-wraper">
+                                                                               <input class="cvo-award-title default_min_width" name="cvoData[award][@index][title]" type="text" maxlength="1024" placeholder="Tên giải thưởng">
+                                                                           </div>
+                                                                           <div class="cvo-award-time-wraper">
+                                                                               <input class="cvo-award-time default_min_width" name="cvoData[award][@index][award_time]" type="text" maxlength="256" placeholder="Thời gian">
+                                                                           </div>
+   
+                                                                       </div>
+
+                                                                   </div>
+                                                               </div>
+                                                               <div style="clear: both"></div>
+                                                           </div>
+                                                           <div class="cvo-block" id="cvo-reference">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-bookmark-o"></i></span>
+                                                                   <span id="cvo-reference-blocktitle" name="cvoData[reference_meta][blocktitle]" type="text">Kỹ năng</span>
+                                                               </div>
+                                                               <div id="reference-table">
+                                                                   <div class="row" type="fieldgroup">
+                                                                       <input class="cvo-reference-content default_min_width" name="cvoData[reference][@index][content]" type="text" maxlength="4096" placeholder="Kỹ năng phần mềm, lập trình...">
+                                                                   </div>
+                                                               </div>
+                                                               <div style="clear: both;"></div>
+                                                           </div>
+                                                           <div id="cvo-certification" class="cvo-block">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-file-text-o"></i></span>
+                                                                   <span id="cvo-certification-blocktitle" name="cvoData[certification_meta][blocktitle]" type="text" class="default_min_width">Chứng chỉ</span>
+                                                               </div>
+                                                               <div id="certification-table">
+                                                                   <div class="row " type="fieldgroup">
+                                                                       <div class="row-title">
+                                                                           <div class="cvo-certification-title-wraper">
+                                                                               <input class="cvo-certification-title default_min_width" name="cvoData[certification][@index][title]" type="text" maxlength="1024" placeholder="Tên chứng chỉ">
+                                                                           </div>
+                                                                           <div class="cvo-certification-time-wraper">
+                                                                               <input class="cvo-certification-time default_min_width" name="cvoData[certification][@index][certification_time]" type="text" maxlength="256" placeholder="Loại chứng chỉ, điểm số,...">
+                                                                           </div>
+   
+                                                                       </div>
+
+                                                                   </div>
+                                                               </div>
+                                                               <div style="clear: both"></div>
+                                                           </div>
+           
+                                                           <div class="cvo-block" id="cvo-additional-info">
+                                                               <div class="cvo-block-title">
+                                                                   <span><i class="fa fa-pencil"></i></span>
+                                                                   <span id="cvo-additional-info-blocktitle" name="cvoData[additional_info_meta][blocktitle]" type="text" class="default_min_width">Thông tin thêm</span>
+                                                               </div>
+                                                               <input id="cvo-additional-information-details" name="cvoData[additional_info][details]" type="text" class="default_min_width" maxlength="4096" placeholder="Điền thêm thông tin khác (nếu có)">
+                                                           </div>
+           
+                                                       </div>
+                                                   </div>
+                                                   <!-- END #col-right -->
+                                                   <div style="clear: both;"></div>
+                                               </div>
+                                               <div style="clear: both;"></div>
+                                           </div>
+                                           <div id="cv-watermark">
+                                               cv for you
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+
+</body>
+</html>

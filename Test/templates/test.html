@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sightengine demo - Python and Flask</title>
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/app.css') }}">
+</head>
+
+<body>
+<header class="navbar">
+ <form action="" method="POST">
+
+   <input type="file" name="image" onchange="onFileSelected(event)">
+   <input style ="display: none" id="base64" name = "base64" type="text" value="">
+   <img id="myimage" height="200">
+   <button>Submit</button>
+ </form>
+
+  <span class="navbar-text"> Image moderation with
+      <a href="https://sightengine.com/">Sightengine</a>
+  </span>
+</header>
+  <script type="text/javascript">
+    function onFileSelected(event){
+      var selectedFile = event.target.files[0];
+      var reader = new FileReader();
+
+      var imgtag = document.getElementById("myimage");
+      var base64 = document.getElementById("base64")
+      imgtag.title = selectedFile.name;
+
+      reader.onload = function(event){
+        imgtag.src = event.target.result;
+        base64.value = event.target.result;
+      };
+      reader.readAsDataURL(selectedFile);
+    }
+  </script>
+
+</body>
+</html>

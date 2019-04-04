@@ -1,3 +1,0 @@
-function chil(){
-    alert("hello")
-}
