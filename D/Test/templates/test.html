@@ -15,6 +15,23 @@
 
     <input type="submit" value="Upload your image" class="btn btn-primary">
   </form>
+  <input type="file" name="image" onchange="onFileSelected(event)">
+  <img id="myimage" height="200">
+  <script type="text/javascript">
+    function onFileSelected(event){
+      var selectedFile = event.target.files[0];
+      var reader = new FileReader();
+
+      var imgtag = document.getElementById("myimage");
+      imgtag.title = selectedFile.name;
+
+      reader.onload = function(event){
+        imgtag.src = event.target.result;
+
+      };
+      reader.readAsDataURL(selectedFile);
+    }
+  </script>
 
   <span class="navbar-text"> Image moderation with
       <a href="https://sightengine.com/">Sightengine</a>
