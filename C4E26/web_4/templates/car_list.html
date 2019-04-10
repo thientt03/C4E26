@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>car_list</h1>
+    <h2>
+    {% for f in all_car%}
+        <h3>Hãng xe: {{f.producer}}</h3>
+        <div>Giá thành: {{f.price}} (tỉ VND)</div>
+        <a href="/car/{{f._id}}">detail</a>
+    {% endfor %}
+    </h2>
+</body>
+</html>

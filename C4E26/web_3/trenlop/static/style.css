@@ -1,0 +1,23 @@
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'header header header'
+    'lcontent rcontent rcontent'
+    ;
+    grid-gap: 5px;
+}
+.header {
+    background-color: red;
+}
+.lcontent {
+    background-color: blue;
+    
+}
+.rcontent {
+    background-color: yellow;
+}
+    
+.header{grid-area: header;}
+.lcontent{grid-area: lcontent;}
+.rcontent{grid-area: rcontent;}
