@@ -1,0 +1,59 @@
+<!-- 
+Nguyen Duc Hoang (Mr)
+Youtube channel: https://www.youtube.com/c/nguyenduchoang
+Programming tutorial channel 
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login Form with validation using JQuery</title>	
+  <!-- Import Bootstrap and JQuery -->
+  <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+  <script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">    
+  </script>            
+  <!-- My CSS and JQuery -->
+  <link href="url_for('static', filename = 'style.css')" rel="stylesheet">
+  <!-- <script type="text/javascript" src="../static/hiu.js"></script>  -->
+</head>
+<body>
+  <div class="container-fluid bg">
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-sm-6 col-xs-12 row-container">
+        <form method="POST">
+          <div class="bn"><h1>Login CV</h1></div>
+          
+          <div class="img"><img src="../static/img/c.png" alt="" height="200" width="320"></div>
+          
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="username" class="form-control" id="username" class="username" placeholder="Enter username" name="username">
+            <!-- <p class="usernameError"></p> -->
+          </div>
+          <div class="form-group">
+            <label for="password" class="label">Password</label>
+            <input type="password" class="form-control" id="password" class="password" placeholder="Password" name="password">            
+            <!-- <p class="passwordError"></p> -->
+          </div>
+          <button type="submit" class="btn btn-success btn-block my-3">Login</button>
+          <button><a href="/signin"> Sig in</a></button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+

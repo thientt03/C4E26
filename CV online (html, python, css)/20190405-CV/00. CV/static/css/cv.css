@@ -1,0 +1,324 @@
+
+.cvo-document .cvo-page {
+    padding-top: 0px;
+    background-image: url("../img/bg_default.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative
+}
+
+.cvo-document .cvo-subpage {
+    padding: 0;
+    padding-bottom: 1cm
+}
+
+#cvo-body {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 14px; 
+    line-height: 18px
+}
+
+
+
+#col-right {
+    width: 70%;
+    float: right;
+    color: #fff;
+    min-height: 560px;
+    padding-top: 1px
+}
+
+#col-left {
+    width: 30%;
+    color: #fff;
+    min-height: 560px;
+    float: left
+}
+
+#col-left .cvo-block {
+    width: 100%;
+    padding: 5px 12px
+}
+
+#cvo-profile-avatar-wraper {
+    padding: 10px 0;
+    text-align: center
+}
+
+#col-left .cvo-block-title {
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+#col-left .cvo-block-title span {
+    display: inline-block;
+    padding-right: 5px;
+    width: 100%;
+    vertical-align: middle
+}
+
+
+#col-left #cvo-profile {
+    width: 100%;
+    padding: 0;
+    margin-top: 0
+}
+
+#profile-title-wrapper {
+    text-align: center;
+    padding: 10px 3px;
+    background-color: #263238
+}
+
+/* Cho phép nhập sửa khá hay */
+/* #profile-title-wrapper [contenteditable=true]:empty:before {
+    content: attr(cvo-placeholder);
+    color: #bbb;
+    font-weight: 100
+} */ 
+
+
+#cvo-profile-fullname {
+    margin-top: 5px;
+    font-size: 22px;
+    font-weight: 700;
+    width: 100%;
+    line-height: 34px;
+    display: inline-block;
+    text-transform: uppercase
+}
+
+#cvo-profile-title {
+    width: 100%;
+    font-size: 14px;
+    font-style: italic
+}
+
+#cvo-profile-avatar {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%
+}
+
+#cvo-profile-website {
+    width: 170px;
+    word-break: break-all
+}
+
+#profile-contact-wraper {
+    width: 90%;
+    margin: 10px auto;
+    padding-top: 10px
+}
+
+#profile-contact-wraper div {
+    padding: 5px 0
+}
+
+#profile-contact-wraper i.fa {
+    width: 19px;
+    height: 19px;
+    background-color: #7c7a79;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px
+}
+
+#profile-contact-wraper span {
+    padding-left: 3px;
+    width: 188px;
+    color: #fff;
+    vertical-align: top;
+    display: inline-block
+}
+
+#profile-contact-wraper span#cvo-profile-email {
+    word-break: break-all
+}
+
+#cvo-objective-objective {
+    width: 100%
+}
+
+#col-right .cvo-block-title span {
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px
+}
+
+#col-right .row {
+    margin: 15px 0
+}
+
+.row-title {
+    margin-bottom: 5px;
+    width: 100%
+}
+
+.row-details {
+    margin-top: 8px
+}
+
+.cvo-education-school-wraper {
+    width: 73%;
+    padding-right: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+    float: left
+}
+
+.cvo-education-school {
+    width: 100%
+}
+
+.cvo-education-time {
+    width: 27%;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: right;
+    float: right;
+    text-transform: uppercase
+}
+
+.cvo-education-time .default_min_width {
+    min-width: 15pt
+}
+
+.cvo-education-title {
+    color: #414142;
+    width: 100%
+}
+
+.cvo-experience-company-wraper {
+    width: 73%;
+    padding-right: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+    float: left
+}
+
+.cvo-experience-company {
+    width: 100%
+}
+
+.cvo-experience-time {
+    width: 27%;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: right;
+    float: right;
+    text-transform: uppercase
+}
+
+.cvo-experience-time .default_min_width {
+    min-width: 15pt
+}
+
+.cvo-experience-position {
+    color: #414142;
+    width: 100%
+}
+
+.cvo-activity-organization-wraper {
+    width: 73%;
+    padding-right: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: 700;
+    color: #fff;
+    float: left
+}
+
+.cvo-activity-organization {
+    width: 100%
+}
+
+.cvo-activity-time {
+    width: 27%;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: right;
+    float: right;
+    text-transform: uppercase
+}
+
+.cvo-activity-time .default_min_width {
+    min-width: 15pt
+}
+
+.cvo-activity-position {
+    color: #414142;
+    width: 100%
+}
+
+.cvo-award-title-wraper,.cvo-certification-title-wraper {
+    width: 73%;
+    padding-right: 5px;
+    text-align: left;
+    color: #fff;
+    float: left
+}
+
+.cvo-award-title,.cvo-certification-title {
+    width: 100%
+}
+
+.cvo-award-time-wraper,.cvo-certification-time-wraper {
+    width: 27%;
+    font-size: .9em;
+    font-weight: 700;
+    text-align: right;
+    float: right;
+    text-transform: uppercase
+}
+
+.cvo-reference-content {
+    width: 100%;
+}
+
+.cvo-award-time-wraper .default_min_width,.cvo-certification-time-wraper .default_min_width {
+    min-width: 15pt
+}
+
+
+.row-col-left {
+    width: 30%;
+    float: left
+}
+
+.row-col-left span {
+    width: 100%;
+    font-weight: 700
+}
+
+.row-col-right {
+    padding-left: 10px;
+    width: 70%;
+    float: left
+}
+
+
+#cv-watermark {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 15px;
+    color: rgb(31,161,132);
+    font-family: 'Dancing Script', cursive;
+}

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Code for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/cv.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+</head>
+<body>
+   <form action="" method="POST">
+       <header class="head"> 
+           <div class="head_content">
+               <img src="../static/img/CV 1.png" alt="logo" height="60px">
+               <ul>
+                   <td >
+                       <li class="active"><a href="/home">Home</a></li>
+                       <!-- <li><a href="">Login</a></li> -->
+                       <!-- <li><a id="a" href="">About us</a></li> -->
+                   </td>
+               </ul>
+           </div>
+       </header>
+       <!-- <form method="POST"> -->
+           <div id="cvbuilder-container">
+                   <div class="container">
+                       <div id="cv-layout-container">
+                           <div id="cv-layout">
+                               <div id="cv-title" class="non-printable" maxlength="64" name="cvtitle" placeholder="Tiêu đề CV">{{cvtitle}}</div> 
+                               <div id="cvo-document-root">
+                                   <div id="cvo-document" class="cvo-document">
+                                       <div class="cvo-page">
+                                           <div class="cvo-subpage">
+                                               <div id="cvo-body">
+                                                   <!--Header-->
+                                                   <div id="cvo-main">
+                                                       <div id="col-left">
+                                                           <!-- #group-top-left -->
+                                                           <div id="group-top-left">
+                                                               <div id="cvo-profile" class="cvo-block">
+                                                                   <div id="profile-title-wrapper">
+                                                                       <div id="cvo-profile-avatar-wraper">
+                                                                            <img src="{{img_file.image}}" alt="" height="200" width="200">
+                                                                       </div>
+                                                                       <div> 
+                                                                           <span id="cvo-profile-fullname" name="fullname" type="text" class="default_min_width" > {{fullname}} </span>
+                                                                           <br>
+                                                                           <span id="cvo-profile-title" name="nominee" type="text" class="default_min_width">{{nominee}}</span>
+                                                                       </div>
+                                                                   </div>
+                                                                   <div id="profile-contact-wraper">
+                                                                       <div id="cvo-profile-dob-wraper">
+                                                                           <i class="fa fa-calendar"></i>
+                                                                           <span id="cvo-profile-dob" name="dateofbirth" type="text" class="default_min_width">{{dateofbirth}}</span>
+                                                                       </div>
+                                                                       <div id="cvo-profile-gender-wraper">
+                                                                           <i class="fa fa-user"></i>
+                                                                           <span id="cvo-profile-gender" name="sex" type="text" class="default_min_width">{{sex}}</span>
+                                                                       </div>
+                                                                       <div id="cvo-profile-phone-wraper">
+                                                                           <i class="fa fa-phone"></i>
+                                                                           <span id="cvo-profile-phone" name="numberphone" type="text" class="default_min_width">{{numberphone}}</span>
+                                                                       </div>
+                                                                       <div id="cvo-profile-email-wraper">
+                                                                           <i class="fa fa-envelope-square"></i>
+                                                                           <span id="cvo-profile-email" name="addressemail" type="text" class="default_min_width">{{addressemail}}</span>
+                                                                       </div>
+                                                                       <div id="cvo-profile-address-wraper">
+                                                                           <i class="fa fa-map-marker"></i>
+                                                                           <span id="cvo-profile-address" name="address" type="text" class="default_min_width">{{address}}</span>
+                                                                       </div>
+                                                                       <div id="cvo-profile-website-wraper">
+                                                                           <i class="fa fa-info"></i>
+                                                                           <span id="cvo-profile-website" name="website" type="text" class="default_min_width">{{website}}</span>
+                                                                       </div>
+                                                                   </div>
+                                                                   <div style="clear: both"></div>
+                                                               </div>
+                                                               <!-- FIXED GROUP -->
+                                                           </div>
+                                                           <!-- END #group-top-left -->
+                                                           <div id="group-bottom-left">
+                                                               <div id="cvo-objective" class="cvo-block" style="display: block;">
+                                                                   <div class="cvo-block-title no-horizontal-line">
+                                                                       <span id="cvo-objective-blocktitle" name="cvoData[objective_meta][blocktitle]" type="text" class="default_min_width" >Nhận xét bản thân</span>
+                                                                   </div>
+                                                                   <span id="cvo-objective-objective" name="awareness" type="text" class="default_min_width">{{awareness}}</span>
+                                                               </div>
+                                                               <div id="cvo-interest" class="cvo-block" style="display: block;">
+                                                                   <div class="cvo-block-title">
+                                                                       <span id="cvo-interest-blocktitle" name="cvoData[interest_meta][blocktitle]" type="text"  class="default_min_width" >Sở thích</span>
+                                                                   </div>
+                                                                   <ul id="interest-table">
+                                                                       <li class="row" type="fieldgroup">
+                                                                           <span class="cvo-interest-details default_min_width" name="hobby" type="text" >{{hobby}}</span>
+                                                                       </li>
+                                                                   </ul>
+                                                               </div>
+                                                               <div id="cvo-skillrate" class="cvo-block" style="display: none;">
+                                                                   <div class="cvo-block-title">
+                                                                       <span id="cvo-skillrate-blocktitle" name="cvoData[skillrate_meta][blocktitle]" type="text">Kỹ năng</span>
+                                                                   </div>
+                                                                   <div id="skillrate-table">
+                                                                       <div class="row" type="fieldgroup">
+                                                                           <span class="cvo-skillrate-title default_min_width" name="skillname" type="text">{{skillname}}</span>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                       <!-- END #col-left -->
+                                                       <!-- #col-right -->
+                                                       <div id="col-right">
+                                                           <div id="group-col-right">
+                                                               <div id="cvo-education" class="cvo-block">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-graduation-cap"></i></span>
+                                                                       <span id="cvo-education-blocktitle" name="level" type="text">Học vấn</span>
+                                                                   </div>
+                                                                   <div id="education-table">
+                                                                       <div class="row " type="fieldgroup">
+                                                                           <div class="row-title">
+                                                                               <div class="cvo-education-school-wraper">
+                                                                                   <span class="cvo-education-school default_min_width" name="schoolname" type="text">{{schoolname}}</span>
+                                                                               </div>
+                                                                               <div class="cvo-education-time">
+                                                                                   <span class="cvo-education-start default_min_width" name="startschool" type="text">{{startschool}}</span>
+                                                                                   <span class="cvo-education-end default_min_width" name="endschool" type="text">{{endschool}}</span>
+                                                                                </div>
+                                                                               <div>
+                                                                                   <span class="cvo-education-title default_min_width" name="majors" type="text">{{majors}}</span>
+                                                                               </div>
+                                                                           </div>
+                                                                           <div class="row-details">
+                                                                               <span class="cvo-education-details default_min_width" name="describe" type="text">{{describe}}</span>
+                                                                           </div>
+
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                               <div id="cvo-experience" class="cvo-block" style="display: block;">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-briefcase"></i></span>
+                                                                       <span id="cvo-experience-blocktitle" name="cvoData[experience_meta][blocktitle]" type="text">Kinh nghiệm làm việc</span>
+                                                                   </div>
+                                                                   <div id="experience-table">
+                                                                       <div class="row " type="fieldgroup">
+                                                                           <div class="row-title">
+                                                                               <div class="cvo-experience-company-wraper">
+                                                                                   <span class="cvo-experience-company default_min_width" name="companyname" type="text">{{companyname}}</span>
+                                                                               </div>
+                                                                               <div class="cvo-experience-time">
+                                                                                   <span class="cvo-experience-start default_min_width" name="startcompany" type="text">{{startcompany}}</span>
+                                                                                   <span class="cvo-experience-end default_min_width" name="endcompany" type="text">{{endcompany}}</span>
+                                                                               </div>
+                                                                               <div>
+                                                                                   <span class="cvo-experience-position default_min_width" name="locationcompany" type="text">{{locationcompany}}</span>
+                                                                               </div>
+                                                                           </div>
+                                                                           <div class="row-details">
+                                                                               <span class="cvo-experience-details default_min_width" name="jobdescription" type="text">{{jobdescription}}</span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                               <div id="cvo-award" class="cvo-block">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-trophy"></i></span>
+                                                                       <span id="cvo-award-blocktitle" name="cvoData[award_meta][blocktitle]" type="text">Giải thưởng</span>
+                                                                   </div>
+                                                                   <div id="award-table">
+                                                                       <div class="row " type="fieldgroup">
+                                                                           <div class="row-title">
+                                                                               <div class="cvo-award-title-wraper">
+                                                                                   <span class="cvo-award-title default_min_width" name="prize" type="text">{{prize}}</span>
+                                                                               </div>
+                                                                               <div class="cvo-award-time-wraper">
+                                                                                   <span class="cvo-award-time default_min_width" name="timeprize" type="text">{{timeprize}}</span>
+                                                                               </div>
+       
+                                                                           </div>
+
+                                                                       </div>
+                                                                   </div>
+                                                                   <div style="clear: both"></div>
+                                                               </div>
+                                                               <div class="cvo-block" id="cvo-reference">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-bookmark-o"></i></span>
+                                                                       <span id="cvo-reference-blocktitle" name="cvoData[reference_meta][blocktitle]" type="text">Kỹ năng</span>
+                                                                   </div>
+                                                                   <div id="reference-table">
+                                                                       <div class="row" type="fieldgroup">
+                                                                           <span class="cvo-reference-content default_min_width" name="softskill" type="text">{{softskill}}</span>
+                                                                       </div>
+                                                                   </div>
+                                                                   <div style="clear: both;"></div>
+                                                               </div>
+                                                               <div id="cvo-certification" class="cvo-block">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-file-text-o"></i></span>
+                                                                       <span id="cvo-certification-blocktitle" name="cvoData[certification_meta][blocktitle]" type="text" class="default_min_width">Chứng chỉ</span>
+                                                                   </div>
+                                                                   <div id="certification-table">
+                                                                       <div class="row " type="fieldgroup">
+                                                                           <div class="row-title">
+                                                                               <div class="cvo-certification-title-wraper">
+                                                                                   <span class="cvo-certification-title default_min_width" name="namecertificate" type="text">{{namecertificate}}</span>
+                                                                               </div>
+                                                                               <div class="cvo-certification-time-wraper">
+                                                                                   <span class="cvo-certification-time default_min_width" name="typecertificate" type="text">{{typecertificate}}</span>
+                                                                               </div>
+       
+                                                                           </div>
+
+                                                                       </div>
+                                                                   </div>
+                                                                   <div style="clear: both"></div>
+                                                               </div>
+               
+                                                               <div class="cvo-block" id="cvo-additional-info">
+                                                                   <div class="cvo-block-title">
+                                                                       <span><i class="fa fa-pencil"></i></span>
+                                                                       <span id="cvo-additional-info-blocktitle" name="cvoData[additional_info_meta][blocktitle]" type="text" class="default_min_width">Thông tin thêm</span>
+                                                                   </div>
+                                                                   <span id="cvo-additional-information-details" name="diffirent" type="text" class="default_min_width">{{diffirent}}</span>
+                                                               </div>
+               
+                                                           </div>
+                                                       </div>
+                                                       <!-- END #col-right -->
+                                                       <div style="clear: both;"></div>
+                                                   </div>
+                                                   <div style="clear: both;"></div>
+                                               </div>
+                                               <div id="cv-watermark">
+                                                   cv for you
+                                               </div>                                                
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+           </div>
+   </form>
+<a href="/up">Bạn có muốn chỉnh sửa </a>
+</body>
+</html>

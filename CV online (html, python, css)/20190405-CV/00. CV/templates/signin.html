@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Document</title>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    border:none;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    overflow: hidden;
+    background-color: #ededed;
+}
+h2 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+input{
+    display: block;
+    border-bottom: 2px solid #00BCD4;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    outline-style: none;
+}
+input[type ="text"]{
+    padding: 5px;
+    width: 70%;
+}
+.form{
+    border: 1px solid #80808000;
+    grid-column: 6/9;
+    grid-row: 3;
+    height: 450px;
+    width: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 0px 14px 0px grey;
+    background-color: white;
+}
+label {
+    margin-left: -126px;
+    display: block;
+    font-weight: lighter;
+ 
+}
+.to{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: minmax(100px,auto);
+    align-items: center;
+}
+.submit{
+    padding: 7px;
+    width: 50%;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    bottom: 10px;
+    cursor: pointer;
+    background: linear-gradient(to right, #fc00ff, #00dbde);
+}
+    </style>
+</head>
+
+<body>
+    <div class="to">
+        <form class="form" method="POST">
+            <h2>SignIn</h2>
+            <label style="margin-left: -150px">Username</label>
+            <input type="text" name="username">
+            <label style="margin-left: -150px">Password</label>
+            <input type="text" name="password">
+            <label style="margin-left: -150px">Fullname</label>
+            <input type="text" name="fullname">
+            <label style="margin-left: -150px">Phone</label>
+            <input type="text" name="phone">
+            <label style="margin-left: -150px">Email</label>
+            <input type="text" name="email">
+
+            <button class="submit" id="submit">Submit</button>  
+        </form>
+    </div>
+</body>
+</html>
